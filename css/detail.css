@@ -1,0 +1,372 @@
+
+/* =========================
+   PROJECT DETAIL PAGE
+========================= */
+
+.detail-header {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.detail-header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link {
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.back-link:hover {
+    opacity: 0.5;
+}
+
+.detail-main {
+    padding: 100px 0 140px;
+}
+
+.detail-label {
+    margin-bottom: 25px;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+
+.detail-title {
+    font-size: clamp(45px, 8vw, 110px);
+    font-weight: 500;
+    letter-spacing: -0.07em;
+    line-height: 1.05;
+}
+
+.detail-subtitle {
+    margin-top: 25px;
+    color: var(--color-gray);
+    font-size: 18px;
+}
+
+.detail-hero {
+    width: 100%;
+    margin-top: 70px;
+    background-color: #E2DFD8;
+    overflow: hidden;
+}
+
+.detail-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.detail-hero.landscape img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.detail-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    margin-top: 100px;
+}
+
+.detail-info h3,
+.detail-description h3 {
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.detail-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail-info li {
+    color: var(--color-gray);
+    font-size: 15px;
+}
+
+.detail-description p {
+    margin-bottom: 20px;
+    color: var(--color-gray);
+    font-size: 16px;
+    line-height: 2;
+}
+
+.detail-description h3:not(:first-child) {
+    margin-top: 50px;
+}
+
+.detail-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 22px;
+    border: 1px solid var(--color-text);
+    font-size: 13px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.detail-button:hover {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+}
+
+.detail-media {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.detail-media img,
+.detail-media video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.detail-media video {
+    background-color: #171717;
+}
+
+.detail-media figcaption {
+    margin-top: 12px;
+    color: var(--color-gray);
+    font-size: 13px;
+}
+
+.detail-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 120px;
+    padding-top: 25px;
+    border-top: 1px solid var(--color-line);
+}
+
+.detail-bottom a {
+    font-size: 13px;
+    transition: opacity 0.3s;
+}
+
+.detail-bottom a:hover {
+    opacity: 0.5;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .detail-header {
+        padding: 22px 0;
+    }
+
+    .detail-main {
+        padding: 70px 0 90px;
+    }
+
+    .detail-title {
+        font-size: 46px;
+    }
+
+    .detail-subtitle {
+        font-size: 15px;
+    }
+
+    .detail-hero {
+        margin-top: 45px;
+    }
+
+    .detail-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin-top: 65px;
+    }
+
+    .detail-description p {
+        font-size: 15px;
+    }
+
+    .detail-media {
+        margin-top: 65px;
+    }
+
+    .detail-bottom {
+        margin-top: 80px;
+    }
+}
+
+/* =========================
+   ARTWORK GALLERY
+========================= */
+
+.artwork-gallery {
+    margin-top: 100px;
+}
+
+.gallery-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-line);
+    font-size: 13px;
+}
+
+.artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.artwork-item {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.artwork-item img {
+    display: block;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.artwork-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   IMAGE VIEWER
+========================= */
+
+.image-viewer {
+    position: fixed;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: #171717;
+    color: white;
+    overflow: hidden;
+}
+
+.image-viewer[open] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-viewer::backdrop {
+    background: rgba(0, 0, 0, 0.96);
+}
+
+.viewer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.viewer-content img {
+    display: block;
+    width: auto;
+    height: auto;
+
+    /* 세로가 화면을 넘지 않도록 제한 */
+    max-height: calc(100dvh - 50px);
+    max-width: calc(100vw - 120px);
+
+    object-fit: contain;
+}
+
+.viewer-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.viewer-close,
+.viewer-prev,
+.viewer-next {
+    position: absolute;
+    z-index: 5;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.viewer-close {
+    top: 20px;
+    right: 25px;
+    font-size: 32px;
+}
+
+.viewer-prev,
+.viewer-next {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 45px;
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.viewer-prev:hover,
+.viewer-next:hover,
+.viewer-close:hover {
+    color: white;
+}
+
+.viewer-prev {
+    left: 20px;
+}
+
+.viewer-next {
+    right: 20px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .artwork-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .artwork-item img {
+        height: 240px;
+    }
+
+    .viewer-content img {
+        max-width: calc(100vw - 30px);
+        max-height: calc(100dvh - 80px);
+    }
+
+    .viewer-prev {
+        left: 5px;
+    }
+
+    .viewer-next {
+        right: 5px;
+    }
+}
