@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANO | Animation Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="site.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-inner">
+
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="PANO">
+                </a>
+            </h1>
+
+            <nav class="nav">
+                <ul class="nav-list">
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-title">Portfolio</a>
+
+                        <ul class="dropdown">
+                            <li><a href="animation.html">작화</a></li>
+                            <li><a href="illustration.html">일러스트</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-title">SNS</a>
+
+                        <ul class="dropdown">
+                            <li>
+                                <a href="https://x.com/PANO_0818"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    X
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.youtube.com/@PANO_0818"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    YouTube
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <section class="main-section">
+
+            <div class="inner">
+
+                <div class="main-title">
+                    <p>PANO / ANIMATION PORTFOLIO</p>
+                    <h2>Selected Works</h2>
+                </div>
+
+                <!-- MAIN SLIDER -->
+                <div class="main-slider">
+
+                    <div class="slide-list" id="slideList">
+
+                        <!-- WORK 01 -->
+                        <div class="slide-item">
+                            <div class="slide-thumbnail">
+                                <video src="videos/featured-01.mp4"
+                                    poster="images/featured-01.jpg"
+                                    preload="metadata"></video>
+                            </div>
+                            <p>Work 01</p>
+                        </div>
+
+                        <!-- WORK 02 -->
+                        <div class="slide-item">
+                            <div class="slide-thumbnail">
+                                <video src="videos/featured-02.mp4"
+                                    poster="images/featured-02.jpg"
+                                    preload="metadata"></video>
+                            </div>
+                            <p>Work 02</p>
+                        </div>
+
+                        <!-- WORK 03 -->
+                        <div class="slide-item">
+                            <div class="slide-thumbnail">
+                                <video src="videos/featured-03.mp4"
+                                    poster="images/featured-03.jpg"
+                                    preload="metadata"></video>
+                            </div>
+                            <p>Work 03</p>
+                        </div>
+
+                        <!-- WORK 04 -->
+                        <div class="slide-item">
+                            <div class="slide-thumbnail">
+                                <video src="videos/featured-04.mp4"
+                                    poster="images/featured-04.jpg"
+                                    preload="metadata"></video>
+                            </div>
+                            <p>Work 04</p>
+                        </div>
+
+                        <!-- WORK 05 -->
+                        <div class="slide-item">
+                            <div class="slide-thumbnail">
+                                <video src="videos/featured-05.mp4"
+                                    poster="images/featured-05.jpg"
+                                    preload="metadata"></video>
+                            </div>
+                            <p>Work 05</p>
+                        </div>
+
+                        <!-- WORK 06 -->
+                        <div class="slide-item">
+                            <div class="slide-thumbnail">
+                                <video src="videos/featured-06.mp4"
+                                    poster="images/featured-06.jpg"
+                                    preload="metadata"></video>
+                            </div>
+                            <p>Work 06</p>
+                        </div>
+
+                    </div>
+
+                    <div class="slider-control">
+                        <button type="button" class="prev">〈</button>
+                        <button type="button" class="next">〉</button>
+                    </div>
+
+                </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL : MAIN -->
+    <div class="modal main-modal">
+
+        <div class="modal-inner">
+
+            <button class="modal-close">×</button>
+
+            <button class="modal-prev">〈</button>
+
+            <div class="modal-content">
+                <video controls>
+                    <source src="videos/featured-01.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <button class="modal-next">〉</button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

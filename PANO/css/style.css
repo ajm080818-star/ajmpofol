@@ -1,0 +1,617 @@
+
+@charset "UTF-8";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f6;
+    color: #222;
+}
+
+
+/* COMMON */
+.inner {
+    width: 92%;
+    max-width: 1760px;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+.header {
+    width: 100%;
+    height: 90px;
+    background: #f8f8f6;
+    position: relative;
+    z-index: 100;
+}
+
+.header-inner {
+    width: 92%;
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* NAV */
+.nav-list {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-item {
+    position: relative;
+    padding: 35px 0;
+}
+
+.nav-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* DROPDOWN */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    min-width: 140px;
+    padding: 10px 0;
+
+    background: #fff;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translate(-50%, 10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 12px 18px;
+    font-size: 13px;
+}
+
+.dropdown li a:hover {
+    background: #eee;
+}
+
+.nav-item:hover .dropdown,
+.nav-item:focus-within .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+
+/* MAIN */
+.main {
+    width: 100%;
+}
+
+.main-section {
+    padding: 70px 0;
+}
+
+.main-title {
+    margin-bottom: 40px;
+}
+
+.main-title p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.main-title h2 {
+    font-size: 42px;
+    font-weight: 500;
+}
+
+
+/* MAIN SLIDER */
+
+/* MAIN SLIDER */
+
+.main-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-list {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.6s ease;
+}
+
+.slide-item {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 0;
+}
+
+.slide-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.slide-thumbnail video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-item p {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+/* SLIDER CONTROL */
+
+.slider-control {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.slider-control button {
+    font-size: 22px;
+}
+
+
+
+/* SLIDER CONTROL */
+.slider-control {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.slider-control button {
+    font-size: 22px;
+}
+
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    display: none;
+    z-index: 200;
+}
+
+.modal-inner {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+    padding: 40px;
+}
+
+.modal-content {
+    width: 75%;
+    height: 85%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content video,
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* MODAL BUTTONS */
+.modal-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+
+    color: #fff;
+    font-size: 40px;
+}
+
+.modal-prev,
+.modal-next {
+    flex-shrink: 0;
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid #fff;
+    border-radius: 50%;
+
+    color: #fff;
+    font-size: 25px;
+}
+
+
+
+/* =================================
+   GALLERY COMMON
+================================= */
+
+.gallery-page {
+    width: 100%;
+    min-height: calc(100vh - 90px);
+}
+
+.gallery-heading {
+    padding: 60px 4% 35px;
+}
+
+.gallery-heading p {
+    margin-bottom: 12px;
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.gallery-heading h2 {
+    font-size: 42px;
+    font-weight: 500;
+}
+
+
+/* =================================
+   ANIMATION GRID
+================================= */
+
+.animation-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+}
+
+.animation-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    padding: 0;
+    overflow: hidden;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.animation-item video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =================================
+   ILLUSTRATION GRID
+================================= */
+
+.illustration-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+}
+
+.illustration-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    padding: 0;
+    overflow: hidden;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.illustration-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =================================
+   HOVER EFFECT
+================================= */
+
+.gallery-hover {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+
+    font-size: 15px;
+    letter-spacing: 2px;
+
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.animation-item:hover .gallery-hover,
+.illustration-item:hover .gallery-hover,
+.animation-item:focus-visible .gallery-hover,
+.illustration-item:focus-visible .gallery-hover {
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+}
+
+
+/* =================================
+   GALLERY MODAL
+================================= */
+
+.gallery-modal {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    z-index: 200;
+}
+
+.modal-background {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+}
+
+.gallery-modal-inner {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 40px;
+    gap: 30px;
+}
+
+.gallery-modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    height: 85%;
+}
+
+/* 원본 비율 유지 */
+.gallery-modal-content video,
+.gallery-modal-content img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* MODAL BUTTONS */
+
+.modal-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+
+    color: #fff;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.modal-prev,
+.modal-next {
+    flex-shrink: 0;
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+
+    color: #fff;
+    font-size: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+    background: #fff;
+    color: #111;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 1100px) {
+
+    .animation-grid,
+    .illustration-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .gallery-heading {
+        padding: 40px 5% 25px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 30px;
+    }
+
+    .animation-grid,
+    .illustration-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-modal-inner {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .gallery-modal-content {
+        width: 75%;
+        height: 75%;
+    }
+
+    .modal-prev,
+    .modal-next {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+}
+
+/* 모바일 메인 슬라이더 */
+@media (max-width: 768px) {
+  .slide-list {
+    gap: 0;
+  }
+
+  .slide-item {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+
+  .slide-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .slide-item p {
+    font-size: 16px;
+  }
+}
+
+/* MODAL DISPLAY */
+
+.gallery-modal {
+    display: none;
+}
+
+/* VIDEO SIZE */
+.gallery-modal-content video {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* IMAGE SIZE */
+.gallery-modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+/* MAIN MODAL VIDEO */
+
+.main-modal .modal-content video {
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+video:hover{
+    cursor: pointer;
+}

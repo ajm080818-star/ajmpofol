@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PANO | Animation</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="gallery.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-inner">
+
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="PANO">
+                </a>
+            </h1>
+
+            <nav class="nav">
+                <ul class="nav-list">
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-title">Portfolio</a>
+
+                        <ul class="dropdown">
+                            <li><a href="animation.html">작화</a></li>
+                            <li><a href="illustration.html">일러스트</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-title">SNS</a>
+
+                        <ul class="dropdown">
+                            <li>
+                                <a href="https://x.com/PANO_0818"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    X
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.youtube.com/@PANO_0818"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    YouTube
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ANIMATION -->
+    <main class="gallery-page">
+
+        <section class="gallery-section">
+
+            <div class="gallery-heading">
+                <p>PANO / PORTFOLIO</p>
+                <h2>Animation</h2>
+            </div>
+
+
+            <!-- ANIMATION GRID -->
+            <div class="animation-grid">
+
+
+                <!-- WORK 01 -->
+                <button class="animation-item"
+                        type="button"
+                        data-index="0">
+
+                    <video
+                        src="videos/animation-01.mp4"
+                        muted
+                        autoplay
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <span class="gallery-hover">보기</span>
+
+                </button>
+
+
+                <!-- WORK 02 -->
+                <button class="animation-item"
+                        type="button"
+                        data-index="1">
+
+                    <video
+                        src="videos/animation-02.mp4"
+                        muted
+                        autoplay
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <span class="gallery-hover">보기</span>
+
+                </button>
+
+
+                <!-- WORK 03 -->
+                <button class="animation-item"
+                        type="button"
+                        data-index="2">
+
+                    <video
+                        src="videos/animation-03.mp4"
+                        muted
+                        autoplay
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <span class="gallery-hover">보기</span>
+
+                </button>
+
+
+                <!-- WORK 04 -->
+                <button class="animation-item"
+                        type="button"
+                        data-index="3">
+
+                    <video
+                        src="videos/animation-04.mp4"
+                        muted
+                        autoplay
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <span class="gallery-hover">보기</span>
+
+                </button>
+
+
+                <!-- WORK 05 -->
+                <button class="animation-item"
+                        type="button"
+                        data-index="4">
+
+                    <video
+                        src="videos/animation-05.mp4"
+                        muted
+                        autoplay
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <span class="gallery-hover">보기</span>
+
+                </button>
+
+
+            
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ANIMATION MODAL -->
+    <div class="gallery-modal" id="animationModal">
+
+        <div class="modal-background"></div>
+
+        <div class="gallery-modal-inner">
+
+            <button class="modal-close" type="button">×</button>
+
+            <button class="modal-prev" type="button">〈</button>
+
+            <div class="gallery-modal-content">
+
+                <!-- JS에서 선택한 영상이 들어갈 영역 -->
+
+            </div>
+
+            <button class="modal-next" type="button">〉</button>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

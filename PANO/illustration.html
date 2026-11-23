@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PANO | Illustration</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="gallery.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-inner">
+
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="PANO">
+                </a>
+            </h1>
+
+            <nav class="nav">
+                <ul class="nav-list">
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-title">Portfolio</a>
+
+                        <ul class="dropdown">
+                            <li><a href="animation.html">작화</a></li>
+                            <li><a href="illustration.html">일러스트</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-title">SNS</a>
+
+                        <ul class="dropdown">
+                            <li>
+                                <a href="https://x.com/PANO_0818"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    X
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.youtube.com/@PANO_0818"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    YouTube
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ILLUSTRATION -->
+    <main class="gallery-page">
+
+        <section class="gallery-section">
+
+            <div class="gallery-heading">
+                <p>PANO / PORTFOLIO</p>
+                <h2>Illustration</h2>
+            </div>
+
+
+            <!-- ILLUSTRATION GRID -->
+            <div class="illustration-grid">
+
+
+                <!-- WORK 01 -->
+                <button class="illustration-item"
+                        type="button"
+                        data-index="0">
+
+                    <img
+                        src="images/illustration-01.jpg"
+                        alt="Illustration 01"
+                        loading="lazy">
+
+                    <span class="gallery-hover">보기</span>
+
+                </button>
+
+
+                <!-- WORK 02 -->
+                <button class="illustration-item"
+                        type="button"
+                        data-index="1">
+
+                    <img
+                        src="images/illustration-02.jpg"
+                        alt="Illustration 02"
+                        loading="lazy">
+
+                    <span class="gallery-hover">보기</span>
+
+                </button>
+
+
+                <!-- WORK 03 -->
+                <button class="illustration-item"
+                        type="button"
+                        data-index="2">
+
+                    <img
+                        src="images/illustration-03.jpg"
+                        alt="Illustration 03"
+                        loading="lazy">
+
+                    <span class="gallery-hover">보기</span>
+
+                </button>
+
+
+                <!-- WORK 04 -->
+                <button class="illustration-item"
+                        type="button"
+                        data-index="3">
+
+                    <img
+                        src="images/illustration-04.jpg"
+                        alt="Illustration 04"
+                        loading="lazy">
+
+                    <span class="gallery-hover">보기</span>
+
+                </button>
+
+
+                
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ILLUSTRATION MODAL -->
+    <div class="gallery-modal" id="illustrationModal">
+
+        <div class="modal-background"></div>
+
+        <div class="gallery-modal-inner">
+
+            <button class="modal-close" type="button">×</button>
+
+            <button class="modal-prev" type="button">〈</button>
+
+            <div class="gallery-modal-content">
+
+                <!-- JS에서 선택한 이미지가 들어갈 영역 -->
+
+            </div>
+
+            <button class="modal-next" type="button">〉</button>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
